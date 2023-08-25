@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background:linear-gradient(45deg,#08001f,#30197d);
+}
+.container{
+    
+    width: 50vw;
+    height: 30vh;
+    /* font-size: 40px; */
+     background:linear-gradient(45deg,#08001f,#30197d);
+     position: absolute;
+     top: 30vh;
+     left: 50%;
+     transform: translate(-50%,-50%);
+    /* background: transparent; */
+    /* backdrop-filter: blur(100px); */
+
+   /* backdrop-filter: blur(100px); */
+}
+.container::before{
+    content: ' ';
+    width: 130px;
+    height: 130px;
+    background-color: red;
+    top: -50px;
+    left: -50px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+
+}
+.container::after{
+    content: ' ';
+    width: 130px;
+    height: 130px;
+    background-color: rgb(46, 147, 255);
+    border-radius: 50%;
+right: -30px;
+    bottom: -50px;
+    position: absolute;
+    z-index: -1;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+background: rgba(235,0,255,0.11);
+  color: white;
+  width: 100%;
+  height: 100%;
+backdrop-filter: blur(100px);
+font-size: 98px;
+}
+#hours::after{
+    content: 'HOURS';
+    font-size: 15px;
+    margin-top: 15vh;
+    margin-left:-8vw;
+    position: absolute;
+}
+
+#minutes::after{
+    content: 'MINUTES';
+    font-size: 15px;
+    margin-top: 15vh;
+    margin-left:-7vw;
+    position: absolute;
+}
+#seconds::after{
+    content: 'SECONDS';
+    font-size: 15px;
+    margin-top: 15vh;
+    margin-left:-5vw;
+    position: absolute;
+}
+.calender{
+    width: 60%;
+    height: 30vh;
+    background-color: #000000;
+    margin-top: 150vh;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(248, 164, 10);
+    width: 50%;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    font-size: 60px;
+    color: #000000;
+padding: 10px;
+
+}
+.month{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(54, 76, 109);
+    width: 50%;
+    height: 100%;
+    margin-left: 30vw;
+    position: absolute;
+    color:white ;
+    font-size: 60px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 50vw; 
+        height: 30vh;
+        top: 30vh; 
+        /* padding: 20px; */
+    }
+
+    .clock {
+        font-size: 50px;
+    }
+
+    .calender {
+        width: 70vw;
+        /* flex-direction: column; */
+    }
+    .month{
+        margin-left: 35vw;
+        font-size: 40px;
+        gap: 1vh;
+    }
+    .date{
+        font-size: 40px;
+        gap: 1vh;
+    }
+
+
+}
+@media(max-width:588px){
+    #hours::after{
+        content: 'Hrs';
+        font-size: 10px;
+        margin-top: -5vh;
+        margin-left: -9vw;
+        padding: 2px;
+    }
+    #minutes::after{
+        content: 'Min';
+        font-size: 10px;
+        margin-top: -5vh;
+        margin-left: -7vw;
+        padding: 2px;
+
+    }
+    #seconds::after{
+        content: 'Sec';
+        font-size: 10px;
+        margin-top: -5vh;
+        /* margin-left: auto; */
+margin-left: -5vw;
+padding: 2px;
+
+    }
+    .clock{
+        font-size: 30px;
+    }
+    .container{
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2vw;
+    }
+    .container::after{
+        content: ' ';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+    }
+    .container::before{
+        content: ' ';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+    }
+    .month,.date{
+font-size: 20px;
+padding: 10px;
+    }
+}
