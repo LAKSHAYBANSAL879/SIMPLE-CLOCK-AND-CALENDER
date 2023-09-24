@@ -18,7 +18,7 @@ const weekDay=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Su
 const yearMonths=["January","Feburary","March","April","May","June","July","August","September","October","November","Decemember"];
 
 date.innerText=(currentDate.getDate());
-day.innerText=weekDay[currentDate.getDay()];
+day.innerText=weekDay[currentDate.getDay()-1];
 month.innerText=yearMonths[currentDate.getMonth()];
 year.innerText=currentDate.getFullYear();
 time();
