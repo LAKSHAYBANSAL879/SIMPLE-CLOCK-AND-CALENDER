@@ -14,11 +14,11 @@ min.innerText=(currentTime.getMinutes()<10?"0":"")+currentTime.getMinutes()+":";
 sec.innerText=(currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
 
 },1000)
-const weekDay=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+const weekDay=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 const yearMonths=["January","Feburary","March","April","May","June","July","August","September","October","November","Decemember"];
 
 date.innerText=(currentDate.getDate());
-day.innerText=weekDay[currentDate.getDay()-1];
+day.innerText=(weekDay[currentDate.getDay()]);
 month.innerText=yearMonths[currentDate.getMonth()];
 year.innerText=currentDate.getFullYear();
 time();
